@@ -20,6 +20,7 @@ class Migration(migrations.Migration):
                 ('nombre', models.CharField(max_length=50)),
                 ('telefono', models.CharField(max_length=12)),
                 ('email', models.EmailField(max_length=254)),
+                
             ],
         ),
     ]
