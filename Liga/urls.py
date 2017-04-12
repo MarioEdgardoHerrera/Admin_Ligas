@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
+    url(r'', include('apps.ligas.urls'), name="inicio"),
     url(r'^admin/', admin.site.urls),
     url(r'^ligas/', include ('apps.ligas.urls', namespace="ligas")),
     url(r'^equipos/', include ('apps.equipos.urls', namespace="equipos")),
