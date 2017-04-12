@@ -1,0 +1,35 @@
+<!-- Aqui declaras que en este template vas a cargar los archivos estáticos -->
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Este meta sirve para que se adapte al tamaño de la pantalla -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="UTF-8">
+    <title>{% block title %} Document {% endblock %}</title>
+
+    <!-- Aqui se cargan los archivos estáticos -->
+    <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/materialize.js' %}"></script>
+
+<header>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">Página 1</a></li>
+        <li><a href="#">Página 2</a></li>
+        <li><a href="#">Página 3</a></li>
+      </ul>
+    </div>
+  </nav>
+        
+</header>
+<body>
+    <!-- Dentro de este bloque se cargan los templates de las apps -->
+    {% block content %} {% endblock %}
+</body>
+</html>
