@@ -7,11 +7,7 @@ class LigaForm(forms.ModelForm):
     class Meta:
         model = Liga
 
-        fields = [
-            'nombre',
-            'telefono',
-            'email',
-        ]
+        fields = ( 'nombre', 'telefono', 'email',)
         labels = {
             'nombre': 'Nombre',
             'telefono': 'Telefono',

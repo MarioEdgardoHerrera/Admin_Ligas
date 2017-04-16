@@ -21,4 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^ligas/', include ('apps.ligas.urls', namespace="ligas")),
     url(r'^equipos/', include ('apps.equipos.urls', namespace="equipos")),
+    
 ]
