@@ -8,21 +8,26 @@
 
     <meta charset="UTF-8">
     <title>{% block title %} Document {% endblock %}</title>
+    
 
     <!-- Aqui se cargan los archivos estáticos -->
     <link rel="stylesheet" href="{% static 'css/materialize.css' %}">
     <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'js/materialize.js' %}"></script>
 
-<header>
+<header style="margin-bottom: 1%;">
 
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+    
+      <a href="{% url 'ver_index'  %}" class="brand-logo">Facil Liga</a> 
+      <a href="{% url 'index_equipos'  %}" class="brand-logo">Facil Liga</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">Página 1</a></li>
-        <li><a href="#">Página 2</a></li>
-        <li><a href="#">Página 3</a></li>
+      <a href="{% url 'agregar_equipo' %}"  class="right hide-on-med-and-down">Agregar Equipo</a>
+      <li><a href="{% url 'liga_crear' %}"  class="right hide-on-med-and-down">Crear Liga</a></li>
+      
+      
+
       </ul>
     </div>
   </nav>

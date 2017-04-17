@@ -9,7 +9,7 @@ class LigaForm(forms.ModelForm):
 
         fields = ( 'nombre', 'telefono', 'email',)
         labels = {
-            'nombre': 'Nombre',
+            'nombre': 'Nombre de Liga',
             'telefono': 'Telefono',
             'email': 'Email',
         }

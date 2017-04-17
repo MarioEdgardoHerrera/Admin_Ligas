@@ -5,23 +5,20 @@
 {% block content %}
 <!-- el contenido de las ligas va aqui -->
 
-<button class="btn teal darken-1">Tabla de Posiciones</button>
-<button class="btn teal darken-1">Tabla de Goleo</button>
-<button class="btn teal darken-1">Tarjetas</button>
+
 <!-- aqui vamos a crear un enlace -->
 
-<!-- Boton para crear ligas <a href="{% url 'liga_crear' %}"  class="btn green">Crear Liga</a> -->
+<!-- Boton para Agregar equipos <a href="{% url 'agregar_equipos' %}"  class="btn green">Agregar Equipo</a> -->
 
 <!-- Fijate que llamamos a una url y le pasamos el nombre que está en el urls.py -->
 
 <!-- este es un ciclo form para iterar todas los datos en un objeto -->
 <ul class="collection">
-{% for liga in ligas %}
+{% for equipo in equipos %}
     <li class="collection-item avatar">
       <i class="material-icons circle">folder</i>
-      <span class="title">{{liga.nombre}}</span>
-      <p> <b>Teléfono: </b> {{liga.telefono}} <br>
-         <b>Email: </b>{{liga.email}} <br>
+      <span class="title">{{equipo.nombre}}</span>
+      <p> <b>Liga: </b> {{equipo.Liga}} <br>
       </p>
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>

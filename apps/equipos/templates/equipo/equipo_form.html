@@ -1,0 +1,13 @@
+<!--Cargar la base -->
+{% extends 'base.html' %} {% load staticfiles %}
+
+
+{% block content %}
+<div class="container">
+	<!-- Generalmente esto basta para crear un form, se puede reusar el mismo código para cualquier form -->
+ <form method="POST" class="post-form text-left">{% csrf_token %} {{ form.as_p }}
+    <button style="width: 100%" type="submit" class="save btn btn-success">Guardar </button>
+ </form>
+ 
+</div>
+{% endblock %}
