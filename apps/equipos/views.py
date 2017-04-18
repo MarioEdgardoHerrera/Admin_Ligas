@@ -20,7 +20,7 @@ def equipo_view(request):
         form = EquiposForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('index_equipo')
+        return redirect('index_equipos')
     else: 
         form = EquiposForm()
     
