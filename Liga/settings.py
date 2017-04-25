@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.ligas',
     'apps.equipos',
+    'apps.jugadores',
 
 ]
 
@@ -81,8 +82,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'ligas',
-        'USER': 'postgres',
-        'PASSWORD': '',
+        'USER': 'edgardo',
+        'PASSWORD': 'maed1256',
         'HOST': 'localhost',
         'PORT': 5432,
     }
