@@ -6,12 +6,12 @@
     {% for jugadore in jugadores %}
     <li class="collection-item avatar">
         <i class="material-icons circle">folder</i> 
-        <span class="title">{{jugadores.nombre}}</span>
-        <p> <b> Apellido: </b> {{jugadores.apellido}} <br>
-            <b> Edad: </b> {{jugadores.edad}} <br>
+        <span class="title">{{jugadore.nombre}}</span>
+        <p> <b> Apellido: </b> {{jugadore.apellido}} <br>
+            <b> Edad: </b> {{jugadore.edad}} <br>
         </p>
         <a href="#!" class="secondary-content"><i class="material-icons"></i></a>
     </li>
-    {% endford %}
+    {% endfor %}
 </ul>
 {% endblock %}
