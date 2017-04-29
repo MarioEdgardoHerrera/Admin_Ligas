@@ -11,16 +11,17 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('ligas', '0001_initial'),
+        ('jugadores', '0001_initial'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Equipos',
+            name='Tarjetas',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nombre', models.CharField(max_length=50)),
-                ('Liga', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='ligas.Liga')),
+                ('tarjetas_amarillas', models.CharField(max_length=1)),
+                ('tarjetas_rojas', models.CharField(max_length=1)),
+                ('Jugadores', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='jugadores.Jugadores')),
             ],
         ),
     ]

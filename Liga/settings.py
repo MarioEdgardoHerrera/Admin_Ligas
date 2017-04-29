@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'apps.ligas',
     'apps.equipos',
     'apps.jugadores',
+    'apps.tabla_posiciones',
+    'apps.tarjetas',
 
 ]
 
