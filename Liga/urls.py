@@ -20,8 +20,11 @@ urlpatterns = [
     url(r'', include('apps.ligas.urls'), name="inicio"),
     url(r'', include('apps.equipos.urls'), name="inicio"),
     url(r'', include('apps.jugadores.urls'), name="inicio"),
+    url(r'', include('apps.tabla_posiciones.urls'), name="inicio"),
     url(r'^admin/', admin.site.urls),
     url(r'^ligas/', include ('apps.ligas.urls', namespace="ligas")),
     url(r'^equipos/', include ('apps.equipos.urls', namespace="equipos")),
     url(r'^jugadores/', include ('apps.jugadores.urls', namespace="jugadores")),
+    url(r'^tabla_posiciones/', include ('apps.tabla_posiciones.urls', namespace="tabla_jugadores")),
+
 ]

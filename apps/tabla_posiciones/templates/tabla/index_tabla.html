@@ -4,11 +4,11 @@
 
 {% block content %} 
 <ul class="collection">
-{% for equipo in equipos %}
+{% for tabla in tabla_posiciones %}
     <li class="collection-item avatar">
       <i class="material-icons circle">folder</i>
-      <span class="title">{{equipo.nombre}}</span>
-      <p> <b>Liga: </b> {{equipo.Liga.nombre}} <br>
+      <span class="title">{{tabla.}}</span>
+      <p> <b>Liga: </b> {{tabla.Liga.nombre}} <br>
       </p>
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
