@@ -2,34 +2,44 @@
 
 {% block content %}
 
-<table class="table table-bordered" >
+<table class="table table-striped" >
     <thead>
     <try>
         <td>#</td>
         <td>posicion</td>
         <td>Equipos</td>
-        <td>juegos_jugados</td>
-        <td>juegos_ganados</td>
-        <td>juegos_empatados</td>
-        <td>juegos_perdidos</td>
-        <td>goles_anotados</td> 
-        <td>goles_permitidos</td> 
-        <td>diferencia_goles</td> 
+        <td>JJ</td>
+        <td>JG</td>
+        <td>JE</td>
+        <td>JP</td>
+        <td>GA</td> 
+        <td>GP</td> 
+        <td>DG</td> 
         <td>puntos</td>
     </try>
     </thead>  
     <tbody>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        {% if tabla_posiciones %}
+        {% for tabla_posiciones in tabla_posiciones.all %}
+        <tr>   
+        <td>{{ tabla_posiciones.posicion }}</td>
+        <td>{{ tabla_posiciones.Equipos }}</td>
+        <td>{{ tabla_posiciones.juegos_jugados }}</td>
+        <td>{{ tabla_posiciones.juegos_ganados }}</td>
+        <td>{{ tabla_posiciones.juegos_empatados }}</td>
+        <td>{{ tabla_posiciones.juegos_perdidos }}</td>
+        <td>{{ tabla_posiciones.goles_anotados }}</td>
+        <td>{{ tabla_posiciones.goles_permitidos }}</td>
+        <td>{{ tabla_posiciones.diferencia_goles }}</td>
+        <td>{{ tabla_posiciones.puntos }}</td>
+        </tr>
+        {% endfor %}
+
+       
+
+        {% endif %}
+
+        
     </tbody>
 
 </table>

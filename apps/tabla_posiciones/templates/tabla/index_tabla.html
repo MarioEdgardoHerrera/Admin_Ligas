@@ -4,15 +4,27 @@
 
 {% block content %} 
 <ul class="collection">
-{% for tabla in tabla_posiciones %}
+{% for tabla_posiciones in tabla %}
     <li class="collection-item avatar">
       <i class="material-icons circle">folder</i>
-      <span class="title">{{tabla.}}</span>
-      <p> <b>Liga: </b> {{tabla.Liga.nombre}} <br>
+      <span class="title">{{tabla_posiciones.posicion}}</span>
+      <p> <b>Equipo: </b> {{tabla_posiciones.Equipo}} <br>
+      <b>juegos_jugados: </b> {{tabla_posiciones.juegos_jugados}} <br>
+      <b>juegos_ganados: </b> {{tabla_posiciones.juegos_ganados}} <br>
+      <b>juegos_empatados: </b> {{tabla_posiciones.juegos_empatados}} <br>
+      <b>juegos_perdidos: </b> {{tabla_posiciones.juegos_perdidos}} <br>
+      <b>goles_anotados: </b> {{tabla_posiciones.goles_anotados}} <br>
+      <b>goles_permitidos: </b> {{tabla_posiciones.goles_permitidos}} <br>
+      <b>diferencia_goles: </b> {{tabla_posiciones.diferencia_goles}} <br>
+      <b>puntos: </b> {{tabla_posiciones.puntos} <br>
+     
+
       </p>
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
 {% endfor %}
 </ul>
-
+<script>
+    $(document).ready(function() { $('select').material_select(); });
+</script>
 {% endblock %}

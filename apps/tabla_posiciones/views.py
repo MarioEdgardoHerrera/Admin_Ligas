@@ -8,8 +8,9 @@ from .models import Tabla
 # Create your views here.
 
 def index(request):
-    
-    return render(request, 'tabla_posiciones/index_tabla.html')
+   tabla = Tabla.objects.all()
+   contexto = {'index_tabla':tabla}
+   return render(request, 'tabla/index_tabla.html')
     
 def tabla_view(request):
     if request.method == 'POST':
@@ -20,10 +21,7 @@ def tabla_view(request):
     else: 
         form = TablaForm()
     
-    return render(request, 'tabla_posiciones/tabla_form.html', {'form':form})
+    return render(request, 'tabla/tabla_form.html', {'form':form})
 
-def tabla_list(request):
-    tabla = Tabla.objects.all()
-    contexto = {'tabla_posiciones':tabla}
-    return render(request, 'tabla/tabla.html', contexto)
+
 
